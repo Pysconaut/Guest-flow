@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GuestFlow | Streamline Your Podcast Guest Onboarding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              'primary-gradient': 'linear-gradient(to right, hsl(var(--primary-gradient-start)), hsl(var(--primary)))',
+            },
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "#030303",
+              foreground: "#FFFFFF",
+              primary: {
+                DEFAULT: "hsl(var(--primary))",
+                foreground: "hsl(var(--primary-foreground))",
+              },
+              secondary: {
+                DEFAULT: "hsl(var(--secondary))",
+                foreground: "hsl(var(--secondary-foreground))",
+              },
+              destructive: {
+                DEFAULT: "hsl(var(--destructive))",
+                foreground: "hsl(var(--destructive-foreground))",
+              },
+              muted: {
+                DEFAULT: "hsl(var(--muted))",
+                foreground: "hsl(var(--muted-foreground))",
+              },
+              accent: {
+                DEFAULT: "hsl(var(--accent))",
+                foreground: "hsl(var(--accent-foreground))",
+              },
+              popover: {
+                DEFAULT: "hsl(var(--popover))",
+                foreground: "hsl(var(--popover-foreground))",
+              },
+              card: {
+                DEFAULT: "hsl(var(--card))",
+                foreground: "hsl(var(--card-foreground))",
+              },
+            },
+            borderRadius: {
+              lg: `var(--radius)`,
+              md: `calc(var(--radius) - 2px)`,
+              sm: `calc(var(--radius) - 4px)`,
+            },
+            animation: {
+              shine: "shine 3s ease-out infinite",
+              'subtle-bounce': 'subtle-bounce 1s infinite',
+            },
+            keyframes: {
+              shine: {
+                "0%": { backgroundPosition: "200% 0" },
+                "25%": { backgroundPosition: "-200% 0" },
+                "100%": { backgroundPosition: "-200% 0" },
+              },
+              'subtle-bounce': {
+                '0%, 100%': {
+                  transform: 'translateY(-10%)',
+                  animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+                },
+                '50%': {
+                  transform: 'translateY(0)',
+                  animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+                },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
+        --card: 222.2 84% 4.9%;
+        --card-foreground: 210 40% 98%;
+        --popover: 222.2 84% 4.9%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 351 95% 71%; /* Brand Pink (like rose-400) */
+        --primary-gradient-start: 230 90% 75%; /* Brand Blue/Indigo */
+        --primary-foreground: 222.2 47.4% 11.2%; /* Dark Blue */
+        --secondary: 217.2 32.6% 17.5%;
+        --secondary-foreground: 210 40% 98%;
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 217.2 32.6% 17.5%;
+        --input: 217.2 32.6% 17.5%;
+        --ring: 351 95% 71%;
+        --radius: 0.5rem;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #030303;
+        color: #FFFFFF;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "@radix-ui/react-slot": "https://esm.sh/@radix-ui/react-slot@1.1.0?external=react",
+    "@radix-ui/react-separator": "https://esm.sh/@radix-ui/react-separator@1.1.0?external=react",
+    "class-variance-authority": "https://esm.sh/class-variance-authority@0.7.0",
+    "clsx": "https://esm.sh/clsx@2.1.1",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@2.4.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.407.0?external=react",
+    "framer-motion": "https://esm.sh/framer-motion@11.2.12?external=react,react-dom",
+    "@vercel/kv": "https://esm.sh/@vercel/kv",
+    "@/lib/utils": "/lib/utils.ts",
+    "@/components/ui/button": "/components/ui/button.tsx",
+    "@/components/ui/card": "/components/ui/card.tsx",
+    "@/components/ui/separator": "/components/ui/separator.tsx",
+    "@/components/ui/spotlight-card": "/components/ui/spotlight-card.tsx",
+    "@/components/ui/input": "/components/ui/input.tsx",
+    "@/components/ui/background-beams": "/components/ui/background-beams.tsx"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
