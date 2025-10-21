@@ -1,7 +1,7 @@
 
 import React, { useState, useRef } from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import { ChecklistIcon, ShieldIcon, MicrophoneIcon } from './components/Icons';
+import { ChecklistIcon, ShieldIcon, MicrophoneIcon } from '@/components/Icons';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { HeroGeometric } from '@/components/ui/shape-landing-hero';
